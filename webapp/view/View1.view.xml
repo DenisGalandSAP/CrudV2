@@ -1,8 +1,13 @@
-<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" controllerName="nmc.be.project5.controller.View1"
+<mvc:View xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable" controllerName="nmc.be.project5.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
+            <smartfilterbar:SmartFilterBar id="smartFilterBar0" entitySet="ZI_USERDGAL"/>
+            <smarttable:SmartTable id="smartTable0" entitySet="ZI_USERDGAL" enableAutoBinding="true" enableAutoColumnWidth="true" smartFilterId="smartFilterBar0" tableType="ResponsiveTable" header="Person">
+                <Table id="table0" growing="true" growingThreshold="20" growingScrollToLoad="true" mode="SingleSelectMaster" selectionChange="onSelection"/>
+            </smarttable:SmartTable>
         </content>
     </Page>
 </mvc:View>

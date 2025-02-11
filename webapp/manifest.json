@@ -21,7 +21,8 @@
                 "type": "OData",
                 "settings": {
                     "annotations": [
-                        "ZUSER_DGAL_ANNO_MDL"
+                        "ZUSER_DGAL_ANNO_MDL",
+                        "annotation"
                     ],
                     "localUri": "localService/metadata.xml",
                     "odataVersion": "2.0"
@@ -33,10 +34,18 @@
                 "settings": {
                     "localUri": "localService/ZUSER_DGAL_ANNO_MDL.xml"
                 }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
             }
         }
     },
     "sap.ui": {
+        "fullWidth": true,
         "technology": "UI5",
         "icons": {
             "icon": "",
