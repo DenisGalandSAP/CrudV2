@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://S4DEV.NMC.BE:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZUSER_DGAL_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ztuserdgal" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Uuid"/>
+                </Key>
+                <Property Name="Uuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Zdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Time" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <NavigationProperty Name="personhobbySet" Relationship="ZUSER_DGAL_SRV.personhobby" FromRole="FromRole_personhobby" ToRole="ToRole_personhobby"/>
+            </EntityType>
+            <EntityType Name="personhobbydgal" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Personuuid"/>
+                    <PropertyRef Name="Hobbyuuid"/>
+                </Key>
+                <Property Name="Personuuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hobbyuuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="NAME" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hoursperweek" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="INT2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Time" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Message" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="State"/>
+                </Key>
+                <Property Name="State" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZI_PERSONHOBBYDGALType" sap:label="Person Hobby DGAL" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Personuuid"/>
+                    <PropertyRef Name="Hobbyuuid"/>
+                </Key>
+                <Property Name="Personuuid" Type="Edm.Guid" Nullable="false" sap:display-format="UpperCase" sap:label="UUID" sap:quickinfo="16-byte UID in 32 chars (hexadecimal)"/>
+                <Property Name="Hobbyuuid" Type="Edm.Guid" Nullable="false" sap:display-format="UpperCase" sap:label="UUID" sap:quickinfo="16-byte UID in 32 chars (hexadecimal)"/>
+                <Property Name="HobbyName" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name"/>
+                <Property Name="Hoursperweek" Type="Edm.Int16" sap:label="INT2" sap:quickinfo="2 Byte Signed Integer"/>
+                <Property Name="Zdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date" sap:quickinfo="Field of type DATS"/>
+                <Property Name="Time" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Time" sap:quickinfo="Time in CHAR Format"/>
+            </EntityType>
+            <EntityType Name="ZI_USERDGALType" sap:label="User DGAL Interface View" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Uuid"/>
+                </Key>
+                <Property Name="Uuid" Type="Edm.Guid" Nullable="false" sap:display-format="UpperCase" sap:label="UUID" sap:quickinfo="16-byte UID in 32 chars (hexadecimal)"/>
+                <Property Name="Name" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name"/>
+                <Property Name="NullValIndicator" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="TRUE" sap:quickinfo="Data element for domain BOOLE: TRUE (='X') and FALSE (=' ')"/>
+                <Property Name="Zdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date" sap:quickinfo="Field of type DATS"/>
+                <Property Name="Time" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Time" sap:quickinfo="Time in CHAR Format"/>
+                <NavigationProperty Name="to_ph" Relationship="ZUSER_DGAL_SRV.assoc_A07FE663822BADA4005E4886D89C64A1" FromRole="FromRole_assoc_A07FE663822BADA4005E4886D89C64A1" ToRole="ToRole_assoc_A07FE663822BADA4005E4886D89C64A1"/>
+            </EntityType>
+            <Association Name="personhobby" sap:content-version="1">
+                <End Type="ZUSER_DGAL_SRV.ztuserdgal" Multiplicity="1" Role="FromRole_personhobby"/>
+                <End Type="ZUSER_DGAL_SRV.personhobbydgal" Multiplicity="*" Role="ToRole_personhobby"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_personhobby">
+                        <PropertyRef Name="Uuid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_personhobby">
+                        <PropertyRef Name="Personuuid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_A07FE663822BADA4005E4886D89C64A1" sap:content-version="1">
+                <End Type="ZUSER_DGAL_SRV.ZI_USERDGALType" Multiplicity="1" Role="FromRole_assoc_A07FE663822BADA4005E4886D89C64A1"/>
+                <End Type="ZUSER_DGAL_SRV.ZI_PERSONHOBBYDGALType" Multiplicity="*" Role="ToRole_assoc_A07FE663822BADA4005E4886D89C64A1"/>
+            </Association>
+            <EntityContainer Name="ZUSER_DGAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZI_PERSONHOBBYDGAL" EntityType="ZUSER_DGAL_SRV.ZI_PERSONHOBBYDGALType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZI_USERDGAL" EntityType="ZUSER_DGAL_SRV.ZI_USERDGALType" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ztuserdgalSet" EntityType="ZUSER_DGAL_SRV.ztuserdgal" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="personhobbySet" EntityType="ZUSER_DGAL_SRV.personhobbydgal" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="MessageCollection" EntityType="ZUSER_DGAL_SRV.Message" sap:content-version="1"/>
+                <AssociationSet Name="personhobby_AssocSet" Association="ZUSER_DGAL_SRV.personhobby" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ztuserdgalSet" Role="FromRole_personhobby"/>
+                    <End EntitySet="personhobbySet" Role="ToRole_personhobby"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_A07FE663822BADA4005E4886D89C64A1" Association="ZUSER_DGAL_SRV.assoc_A07FE663822BADA4005E4886D89C64A1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZI_USERDGAL" Role="FromRole_assoc_A07FE663822BADA4005E4886D89C64A1"/>
+                    <End EntitySet="ZI_PERSONHOBBYDGAL" Role="ToRole_assoc_A07FE663822BADA4005E4886D89C64A1"/>
+                </AssociationSet>
+                <FunctionImport Name="Action" ReturnType="ZUSER_DGAL_SRV.Message" EntitySet="MessageCollection" m:HttpMethod="GET">
+                    <Parameter Name="test" Type="Edm.String" Mode="In" MaxLength="1"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotations Target="ZUSER_DGAL_SRV.ZUSER_DGAL_SRV_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZUSER_DGAL_SRV.ZUSER_DGAL_SRV_Entities/ZI_USERDGAL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_ph"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://S4DEV.NMC.BE:443/sap/opu/odata/sap/ZUSER_DGAL_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://S4DEV.NMC.BE:443/sap/opu/odata/sap/ZUSER_DGAL_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

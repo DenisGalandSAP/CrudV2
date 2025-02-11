@@ -1,0 +1,8 @@
+<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" controllerName="nmc.be.project5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        </content>
+    </Page>
+</mvc:View>
