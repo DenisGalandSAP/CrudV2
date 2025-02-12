@@ -22,6 +22,19 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Value" Path="Name"/>
+                            <PropertyValue Property="Url">
+                                <Apply Function="odata.fillUriTemplate">
+                                    <String>#/RouteView2/{sUuid}</String>
+                                    <LabeledElement Name="sUuid">
+                                        <Apply Function="odata.uriEncode">
+                                            <Path>Uuid</Path>
+                                        </Apply>
+                                    </LabeledElement>
+                                </Apply>
+                            </PropertyValue>
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Zdate"/>
                         </Record>

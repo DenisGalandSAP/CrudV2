@@ -32,7 +32,7 @@ sap.ui.define([
                 const yyyymmdd = `${year}${month}${day}`;
                 var oContext = this.getModel().createEntry('/ztuserdgalSet', {
                     properties: {
-                        Uuid: this.generateUUID(),
+                        Uuid: '',
                         Name: ''
                     }
                 })
@@ -51,6 +51,7 @@ sap.ui.define([
                     this.getModel().submitChanges({
                         success: (oResponse) => {
                             this.oCreateFragment.close();
+                            this.getModel().refresh();
                             MessageToast.show("Entry created", {
                                 at: "center center"
                             })

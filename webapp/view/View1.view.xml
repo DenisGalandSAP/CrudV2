@@ -16,22 +16,8 @@
                             <Button id="_IDGenButton3" text="{i18n>delete}" press="onDelete" visible="{View1>/UDButtonVisible}" />
                         </Toolbar>
                     </headerToolbar>
-                    <columns>
-                        <Column id="column0">
-                            <customData>
-                                <core:CustomData key="p13nData" value='\{"columnKey": "Name", "leadingProperty": "Name", "columnIndex": 0}'
-                                />
-</customData>
-<Text id="text0" text="Name" />
-                            </Column>
-                        </columns>
-                        <items>
-                            <ColumnListItem id="columnListItem0">
-                                <Link id="link0" text="{Name}" press="onNavigate" />
-                            </ColumnListItem>
-                        </items>
-                    </Table>
-                </smarttable:SmartTable>
-            </content>
-        </Page>
-    </mvc:View>
+                </Table>
+            </smarttable:SmartTable>
+        </content>
+    </Page>
+</mvc:View>
