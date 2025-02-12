@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="Dialog0">
+        <content>
+            <form:SimpleForm id="simpleForm0">
+                <Label id="label0" text="{/#ZI_USERDGALType/Uuid/@sap:label}" labelFor="input0"/>
+                <Input id="input0" value="{Uuid}" enabled="false"/>
+                <Label id="label1" text="{/#ZI_USERDGALType/Name/@sap:label}" labelFor="input1"/>
+                <Input id="input1" value="{Name}"/>
+            </form:SimpleForm>
+        </content>
+        <beginButton>
+            <Button id="button0" text="Save" press="onSaveEdit"/>
+        </beginButton>
+        <endButton>
+            <Button id="button1" text="Cancel" press="onCancelEdit"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

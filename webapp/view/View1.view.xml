@@ -6,7 +6,16 @@
         <content>
             <smartfilterbar:SmartFilterBar id="smartFilterBar0" entitySet="ZI_USERDGAL"/>
             <smarttable:SmartTable id="smartTable0" entitySet="ZI_USERDGAL" enableAutoBinding="true" enableAutoColumnWidth="true" smartFilterId="smartFilterBar0" tableType="ResponsiveTable" header="Person">
-                <Table id="table0" growing="true" growingThreshold="20" growingScrollToLoad="true" mode="SingleSelectMaster" selectionChange="onSelection"/>
+                <Table id="table0" growing="true" growingThreshold="20" growingScrollToLoad="true" mode="SingleSelectMaster" selectionChange="onSelection">
+                    <headerToolbar>
+                        <Toolbar id="_IDGenToolbar">
+                            <ToolbarSpacer id="_IDGenToolbarSpacer" />
+                            <Button id="_IDGenButton1" text="{i18n>create}" press="onCreate"/>
+                            <Button id="_IDGenButton2" text="{i18n>update}" press="onUpdate" visible="{View1>/UDButtonVisible}"/>
+                            <Button id="_IDGenButton3" text="{i18n>delete}" press="onDelete" visible="{View1>/UDButtonVisible}" />
+                        </Toolbar>
+                    </headerToolbar>
+                </Table>
             </smarttable:SmartTable>
         </content>
     </Page>
