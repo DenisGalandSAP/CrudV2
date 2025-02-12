@@ -1,22 +1,37 @@
-<mvc:View xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
     xmlns:smarttable="sap.ui.comp.smarttable" controllerName="nmc.be.project5.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <smartfilterbar:SmartFilterBar id="smartFilterBar0" entitySet="ZI_USERDGAL"/>
-            <smarttable:SmartTable id="smartTable0" entitySet="ZI_USERDGAL" enableAutoBinding="true" enableAutoColumnWidth="true" smartFilterId="smartFilterBar0" tableType="ResponsiveTable" header="Person">
+            <smartfilterbar:SmartFilterBar id="smartFilterBar0" entitySet="ZI_USERDGAL" />
+            <smarttable:SmartTable id="smartTable0" entitySet="ZI_USERDGAL" requestAtLeastFields="Uuid" enableAutoBinding="true" enableAutoColumnWidth="true" smartFilterId="smartFilterBar0" tableType="ResponsiveTable" header="Person">
                 <Table id="table0" growing="true" growingThreshold="20" growingScrollToLoad="true" mode="SingleSelectMaster" selectionChange="onSelection">
                     <headerToolbar>
                         <Toolbar id="_IDGenToolbar">
                             <ToolbarSpacer id="_IDGenToolbarSpacer" />
-                            <Button id="_IDGenButton1" text="{i18n>create}" press="onCreate"/>
-                            <Button id="_IDGenButton2" text="{i18n>update}" press="onUpdate" visible="{View1>/UDButtonVisible}"/>
+                            <Button id="_IDGenButton1" text="{i18n>create}" press="onCreate" />
+                            <Button id="_IDGenButton2" text="{i18n>update}" press="onUpdate" visible="{View1>/UDButtonVisible}" />
                             <Button id="_IDGenButton3" text="{i18n>delete}" press="onDelete" visible="{View1>/UDButtonVisible}" />
                         </Toolbar>
                     </headerToolbar>
-                </Table>
-            </smarttable:SmartTable>
-        </content>
-    </Page>
-</mvc:View>
+                    <columns>
+                        <Column id="column0">
+                            <customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "Name", "leadingProperty": "Name", "columnIndex": 0}'
+                                />
+</customData>
+<Text id="text0" text="Name" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem id="columnListItem0">
+                                <Link id="link0" text="{Name}" press="onNavigate" />
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </smarttable:SmartTable>
+            </content>
+        </Page>
+    </mvc:View>

@@ -1,0 +1,9 @@
+<mvc:View xmlns:smarttable="sap.ui.comp.smarttable" controllerName="nmc.be.project5.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page2">
+        <content>
+            <smarttable:SmartTable id="smartTable1" entitySet="ZI_PERSONHOBBYDGAL" requestAtLeastFields="Personuuid,Hobbyuuid" initiallyVisibleFields="HobbyName" tableBindingPath="to_ph" enableAutoBinding="true" />
+        </content>
+    </Page>
+</mvc:View>
